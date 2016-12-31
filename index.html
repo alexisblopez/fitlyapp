@@ -8,6 +8,17 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <script type="text/javascript">
+            <!--
+                function toggle_visibility(id) {
+                var e = document.getElementById(id);
+                if(e.style.display == 'block')
+                    e.style.display = 'none';
+                else
+                    e.style.display = 'block';
+                }
+            //-->
+        </script>
 	</head>
 	<body class="landing">
 
@@ -24,8 +35,32 @@
 									<div id="menu">
 										<ul>
 											<li>I am a...</li>
-											<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSewevlXBIIvfddWd72pgzxy_CzQT5i-fQY-xdvx7kIK8jrSyg/viewform?c=0&w=1">Sweater</a></li>
-											<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSewevlXBIIvfddWd72pgzxy_CzQT5i-fQY-xdvx7kIK8jrSyg/viewform?c=0&w=1">Trainer</a></li>
+											<li><a href="#" onclick="toggle_visibility('popups');"> Sweater</a></li>
+                                            <div id="popups" style="display:none" class="popup-position">
+                                                <div id="popup-wrapper">
+                                                    <div id="popup-container">
+                                                      <form action="php/sweater.php" method="post">
+                                                          <br>
+                                                          <input type="text" name="sweatername" placeholder="Name"><br>
+                                                          <input type="email" name="sweateremail" placeholder="Email"><br>
+                                                          <input class="button fit special" type="submit" value="Submit">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+											<li><a href="#" onclick="toggle_visibility('popupt');">Trainer</a></li>
+                                            <div id="popupt" style="display:none" class="popup-position">
+                                                <div id="popup-wrapper">
+                                                    <div id="popup-container">
+                                                      <form action="php/trainer.php" method="post">
+                                                          <br>
+                                                          <input type="text" name="trainername" placeholder="Name"><br>
+                                                          <input type="email" name="traineremail" placeholder="Email"><br>
+                                                          <input class="button fit special" type="submit" value="Submit">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
 											<!--<li><a href="#">Sign Up</a></li>
 											<li><a href="#">Log In</a></li>-->
 										</ul>
