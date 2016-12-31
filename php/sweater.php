@@ -7,6 +7,10 @@ $con = mysql_connect("localhost","root","ajdwgplp");
 if (!$con) {
     die("Cannot connect: " . mysql_error());
 }
+    
+if ($con) {
+    echo "YASSS!";
+}
 
 mysql_select_db("fitly",$con);
 
