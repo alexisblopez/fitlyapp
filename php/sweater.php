@@ -2,7 +2,7 @@
 
 if (isset($_POST['submit'])) {
 
-$con = mysql_connect("localhost","root","ajdwgplp");
+$con = mysql_connect("localhost","Alexis","5549");
 
 if (!$con) {
     die("Cannot connect: " . mysql_error());
