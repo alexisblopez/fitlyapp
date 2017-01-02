@@ -12,7 +12,7 @@ if (!$conn) {
 }
 
 $sql = "INSERT INTO sweaters (name, email)
-VALUES ('John', 'john@example.com')";
+VALUES ('$_POST[sname]', '$_POST[semail]')";
 
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
