@@ -18,7 +18,7 @@ if (isset($_POST['sweater'])) {
     VALUES ('$_POST[sname]', '$_POST[semail]')";
 
     if (mysqli_query($conn, $sql)) {
-        echo "New record created successfully";
+        echo '<script>alert("Thank you for signing up!");<script>';
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
@@ -43,7 +43,7 @@ if (isset($_POST['trainer'])) {
     VALUES ('$_POST[tname]', '$_POST[temail]')";
 
     if (mysqli_query($conn, $sql)) {
-        echo "New record created successfully";
+        echo '<script>alert("Thank you for signing up!");<script>';
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
