@@ -26,7 +26,7 @@ if (isset($_POST['sweater'])) {
     mysqli_close($conn);
 }
 
-if (isset($_POST['sweater'])) {
+if (isset($_POST['trainer'])) {
     $servername = "localhost";
     $username = "Alexis";
     $password = "5549";
